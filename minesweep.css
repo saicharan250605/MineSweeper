@@ -89,7 +89,7 @@ h1{
 }
 #won{
     font-size:150px;
-    translate:1600px;
+    translate:1750px;
     position: absolute;
 }
 .wonclass{
@@ -101,6 +101,6 @@ h1{
     animation-fill-mode: forwards;
 }
 @keyframes anime4 {
-    from{translate: 1600px;}
+    from{translate: 1750px;}
     to{translate:0px}
 }
