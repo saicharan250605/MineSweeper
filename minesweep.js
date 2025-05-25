@@ -76,6 +76,7 @@ let handler =(event)=>{
         isGameOver=true;
         minesweepcontainer.classList.add("removeMainContainerwhenwon");
         toughnessText.classList.add("removeMainContainerwhenwon");
+        document.querySelector("#won").innerText="Congratulations You won";
         document.querySelector("#won").classList.add("wonclass");
         toughnessText.innerHTML="<p>You Won</p>";
         toughnessText.style.color="green";
