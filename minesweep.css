@@ -1,0 +1,106 @@
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    margin-top: 0px;
+    overflow:hidden;
+}
+*::selection{
+    background-color:red;
+    color:white;
+}
+h1{
+    font-size: 50px;
+    margin:0;
+}
+#minesweepContainer{
+    height: 480px;
+    width:480px;
+    display:grid;
+    grid-template-columns: repeat(8,2fr);
+    grid-template-rows: repeat(8,2fr);
+}
+.boxes{
+    box-sizing: border-box;
+    height:60px;
+    width:60px;
+    background-color: rgb(128, 128, 128);
+    border-radius: 3px;
+    opacity: 0.8;
+    box-shadow: inset -2px -2px 3px black, inset 2px 2px 7px white;
+    border:0.5px solid grey;
+}
+.toughness-buttons{
+    margin:20px;
+    padding:6px 20px 6px 20px;
+    font-size:20px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.toughness-text{
+    font-size:38px;
+    text-align: center;
+}
+.number-count{
+    color:red;
+}
+.bomb-image{
+    background-image: url(images/mine.png);
+    background-size: cover;
+    animation: anime 5s linear 2s 1 normal;
+    animation-fill-mode: forwards;
+}
+@keyframes anime {
+    from{background-image: url(images/mine.png);}
+    to{background-image: none;}
+}
+.middlefinger{
+    border-radius: 3px;
+    border:2px solid grey;
+    background-image: url(images/mine.png);
+    background-size: cover;
+    animation: anime2 1s linear 1s 1 normal;
+    animation-fill-mode: forwards;
+}
+@keyframes anime2 {
+    from{background-image: url(images/mine.png);}
+    to{background-image: url(images/middleFinger.jpg);}
+}
+.tickMark{
+    color:white;
+    font-size: 50px;
+    margin:0px 0px 0px 10px;
+}
+.removeMainContainerwhenwon{
+    animation: anime3 1s linear 1s 1 normal;
+    animation-fill-mode: forwards;
+}
+@keyframes anime3 {
+    from{opacity: 1;}
+    to{opacity: 0;}
+    to{display: none;}
+}
+.removeMainContainerwhenlost{
+    animation: anime3 1s linear 4s 1 normal;
+    animation-fill-mode: forwards;
+}
+#won{
+    font-size:150px;
+    translate:1500px;
+    position: absolute;
+}
+.wonclass{
+    animation: anime4 3s linear 2s normal;
+    animation-fill-mode:forwards;
+}
+.lostclass{
+    animation:anime4 3s linear 5s normal;
+    animation-fill-mode: forwards;
+}
+@keyframes anime4 {
+    from{translate: 1500px;}
+    to{translate:0px}
+}
