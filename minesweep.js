@@ -91,9 +91,4 @@ let modeSelected= () =>{
     grids.forEach((value)=>{
         value.addEventListener("click",handler);
     });
-    // for(let i=0;i<=63;i++){
-    //     let idname=`hi${i}`;
-    //     let singlegrid=document.querySelector(`#${idname}`);
-    //     singlegrid.addEventListener("click",handler);
-    // }
 };
